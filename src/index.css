@@ -1,0 +1,31 @@
+:root {
+  color: #fff;
+  text-align: center;
+  background-color: #001;
+  font-family: Georgia;
+  font-size: 18px;
+}
+
+h1, h2 {
+  margin: 8px;
+  font-family: sans-serif;
+}
+
+h1 {
+  text-shadow: 0 2px 5px #f0f;
+  margin-top: 32px;
+  font-size: 48px;
+}
+
+a {
+  color: #658;
+}
+
+.p {
+  width: 50%;
+  margin: auto;
+}
+
+::selection {
+  background-color: #338;
+}
