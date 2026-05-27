@@ -26,6 +26,10 @@ a {
   margin: auto;
 }
 
+@media (max-aspect-ratio: 1) {
+  .p { width: 100%; }
+}
+
 ::selection {
   background-color: #338;
 }
