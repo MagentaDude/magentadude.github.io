@@ -1,0 +1,35 @@
+:root {
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-family: 'Comic Sans MS';
+  font-size: 18px;
+}
+
+h1, h2 {
+  margin: 8px;
+  font-family: sans-serif;
+}
+
+h1 {
+  text-shadow: 0 2px 5px #c8f;
+  margin-top: 32px;
+  font-size: 32px;
+}
+
+a {
+  color: #86f;
+}
+
+.p {
+  width: 50%;
+  margin: auto;
+}
+
+@media (max-aspect-ratio: 1) {
+  .p { width: 100%; }
+}
+
+::selection {
+  background-color: #215
+}

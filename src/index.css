@@ -18,18 +18,15 @@ h1 {
 }
 
 a {
-  color: #658;
-}
-
-.p {
-  width: 50%;
-  margin: auto;
-}
-
-@media (max-aspect-ratio: 1) {
-  .p { width: 100%; }
+  color: #a8f;
 }
 
 ::selection {
   background-color: #338;
+}
+
+body {
+  width: 600px;
+  max-width: 100%;
+  margin: auto;
 }

@@ -5,7 +5,6 @@
 
 .project {
   border: 2px solid #438;
-  width: fit-content;
   margin: 16px auto;
   padding: 8px;
 }
@@ -13,6 +12,7 @@
 .yellow {
   color: #ff0;
   font-family: Comic Sans MS;
+  display: block;
 }
 
 footer {
