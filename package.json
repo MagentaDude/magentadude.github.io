@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
-    "deploy": "gh-pages -d dist"
+    "deploy": "echo 'magentadude.is-a.dev' > dist/CNAME && gh-pages -d dist"
   },
   "dependencies": {
     "preact": "^10.29.1"
