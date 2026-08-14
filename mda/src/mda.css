@@ -4,6 +4,8 @@
   text-align: center;
   font-family: 'Comic Sans MS';
   font-size: 18px;
+  max-width: 150vh;
+  margin: auto;
 }
 
 h1, h2 {
@@ -24,6 +26,18 @@ a {
 .p {
   width: 50%;
   margin: auto;
+}
+
+table {
+  margin: auto;
+}
+
+th {
+  border: 2px #c8f solid;
+}
+
+td {
+  border: 2px #215 solid;
 }
 
 @media (max-aspect-ratio: 1) {

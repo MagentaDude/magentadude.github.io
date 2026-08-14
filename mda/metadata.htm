@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="src/mda.css" rel="stylesheet">
+    <title>Metadata Spec | MagentaDude Audio</title>
+  </head>
+  <body>
+    <a href="./" title="Back to homepage"><img src="logo.svg" alt="MagentaDude Audio logo" style="width: 50vh; max-width: 50vw" /></a>
+    <h1>Metadata Specification</h1>
+    <p>MDA uses the <a href="https://msgpack.org/" target="_blank">MessagePack</a> format to store audio metadata. MessagePack has similar functionality to JSON, making it extremely flexible, and it also has the benefit of being able to efficiently store data, including binary, making it ideal for embedding album covers.</p>
+    <p>MDA's format uses a 24-bit unsigned integer to store the length of the metadata, with a maximum of 16,777,215 bytes (almost 17 MB). This was chosen because large amounts of metadata should not be embedded in the format, and a 16-bit range would be too low for most images. However, the length of the actual audio data stored in an MDA file is theoretically limitless.</p>
+    <p>All metadata keys should be in camelCase. Below is a list of official metadata keys, heavily based off of the metadata fields seen in foobar2000. All keys are optional, and you can include your own custom keys as well.</p>
+    <pre style="text-align:left;width:fit-content;margin:auto">
+{
+  "artist": str,
+  "title": str,
+  "album": str,
+  "date": {
+    "d": int, // day of the month
+    "m": int, // month number
+    "y": int, // year
+  },
+  "genre": str,
+  "composer": str,
+  "performer": str,
+  "albumArtist": str,
+  "trackNumber": int,
+  "totalTracks": int,
+  "discNumber": int,
+  "totalDiscs": int,
+  "comment": str,
+  "copyright": str,
+  "license": str,
+  "contact": str,
+  "cover": bin // image data
+}
+    </pre>
+
+    <small>© 2026 <a href="/">MagentaDude</a></small>
+  </body>
+</html>

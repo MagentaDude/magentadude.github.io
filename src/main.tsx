@@ -2,6 +2,7 @@ import { render } from 'preact'
 import './app.css'
 
 import ghIcon from './assets/icons/github-invertocat-white.svg'
+import protonIcon from './assets/icons/proton-mail-logomark.svg'
 import scratchIcon from './assets/icons/scratch-s.svg'
 import dcIcon from './assets/icons/discord-symbol-white.svg'
 import ytIcon from './assets/icons/yt-icon-red-digital.svg'
@@ -9,7 +10,7 @@ import webIcon from './assets/icons/mdi-web.svg'
 
 function LinkedIcon(props: { alt: string, url?: string, user?: string, src: string, size?: number }) {
   const img = <img src={props.src} alt={props.alt} title={props.alt} {...props.user && {onmouseenter: () => {
-    document.getElementById('header')!.innerText = `@${props.user}`
+    document.getElementById('header')!.innerText = props.user!
   }}} height={props.size ? props.size : 32} class="icon" />
   if (props.url) {
     return <a href={props.url} target="_blank">{img}</a>
@@ -36,15 +37,16 @@ function App() {
     <div id="links" onMouseLeave={() => {
       document.getElementById('header')!.innerText = 'MagentaDude'
     }}>
-      <LinkedIcon alt="GitHub" url="https://github.com/MagentaDude" user="MagentaDude" src={ghIcon} size={48} />
-      <LinkedIcon alt="Scratch" url="https://scratch.mit.edu/users/MagentaDude1359/" user="MagentaDude1359" src={scratchIcon} size={48} />
-      <LinkedIcon alt="Discord" user="magentadude" src={dcIcon} size={48} />
-      <LinkedIcon alt="YouTube" url="https://www.youtube.com/@MagentaDudeYT" user="MagentaDudeYT" src={ytIcon} size={48} />
+      <LinkedIcon alt="GitHub" url="https://github.com/MagentaDude" user="@MagentaDude" src={ghIcon} size={48} />
+      <LinkedIcon alt="Email" url="mailto:magentadude@proton.me" user="magentadude@proton.me" src={protonIcon} size={48} />
+      <LinkedIcon alt="Discord" user="@magentadude" src={dcIcon} size={48} />
+      <LinkedIcon alt="Scratch" url="https://scratch.mit.edu/users/MagentaDude1359/" user="@MagentaDude1359" src={scratchIcon} size={48} />
+      <LinkedIcon alt="YouTube" url="https://www.youtube.com/@MagentaDudeYT" user="@MagentaDudeYT" src={ytIcon} size={48} />
     </div>
     <p class="p">Hi, and welcome to my website! I'm a composer and programmer, although I also make videos sometimes. My favorite coding languages are TypeScript, C, and GDScript. I also have 200 Scratch followers.</p>
     
     <Project title="MagentaDude Audio" desc="Fast, small, and pleasing audio compression.">
-      <LinkedIcon alt="Try it out" url="mda/" src={webIcon} />
+      {/*<LinkedIcon alt="Try it out" url="mda/" src={webIcon} />*/}
       <ComingSoon />
     </Project>
     <Project title="video2sb3" desc="Web tool to convert videos into Scratch projects.">

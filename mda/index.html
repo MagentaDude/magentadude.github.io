@@ -2,26 +2,67 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="icon" type="image/png" href="logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="src/mda.css" rel="stylesheet">
     <title>MagentaDude Audio</title>
   </head>
   <body>
-    <p>MagentaDude Audio, or MDA for short, is a simple lossy audio format optimized for pleasant quality, predictable ~100kbps compression, and blazing-fast encoding and decoding.</p>
+    <img src="logo.svg" alt="MagentaDude Audio logo" style="width: 50vh; max-width: 50vw" />
+    <p style="margin-top:0">Specification | <a href="metadata.htm">Metadata Spec</a> | <a href="license.htm">License</a></p>
+    <p>MagentaDude Audio, or MDA for short, is a simple lossy audio format optimized for pleasant quality, 1 bit per sample compression (64kbps @ 32khz stereo), and blazing-fast encoding and decoding.</p>
 
     <h1>Q&A</h1>
     <p><i>How does MDA compare to [insert audio format here]?</i></p>
-    <p>MDA and many other audio formats are lossy, which means that at lower bitrates they have artifacts that cause noticable—and for some listeners, unpleasant—changes to the audio. For example, MP3 can sound metallic, especially at lower bitrates, and Ogg Vorbis can sound airy.</p>
-    <p>While MDA definitely can have audible artifacts, its artifacts aim to sound more natural, like white noise or vinyl, giving a better listening experience.</p>
-    <p>In addition, MDA is a simpler format than many others, making it faster to decode and using less battery life.</p>
+    <table>
+      <tr>
+        <th>Format</th>
+        <th>Transparent bitrate*</th>
+        <th>Typical artifacts</th>
+        <th>Speed</th>
+      </tr>
+      <tr>
+        <td>MP3</td>
+        <td style="color:orange">192kbps</td>
+        <td>Metallic noises, pre-echo</td>
+        <td style="color:orange">Medium</td>
+      </tr>
+      <tr>
+        <td>OGG</td>
+        <td style="color:yellow">128kbps</td>
+        <td>Swooshing, pre-echo</td>
+        <td style="color:red">Slow</td>
+      </tr>
+      <tr>
+        <td>Opus</td>
+        <td style="color:lime">64kbps</td>
+        <td>Crackling</td>
+        <td style="color:yellow">Fast</td>
+      </tr>
+      <tr>
+        <td>QOA</td>
+        <td style="color:red">201kbps**</td>
+        <td>White noise</td>
+        <td style="color:lime">Very fast</td>
+      </tr>
+      <tr>
+        <td>MDA</td>
+        <td style="color:lime">64kbps**</td>
+        <td>White noise</td>
+        <td style="color:lime">Very fast</td>
+      </tr>
+    </table>
+    <small>* In my opinion; very subjective!</small><br/>
+    <small>** Fixed bits per sample format; I've used 32khz stereo as a reference point</small>
+    <p>As you can see, it's like Opus but faster and with more white noise. If you want to listen for yourself, you can try out the <a href="samples/">audio samples</a>.</p>
+
     <p><i>What if I don't want any artifacts at all?</i></p>
     <p>For that you would want a lossless audio format. I recommend the excellent and widely supported <a href="https://xiph.org/flac/">FLAC</a> format, which typically cuts the size of an uncompressed WAV file in half while still preserving all audio data.</p>
     <p><i>Is MDA free and open source?</i></p>
     <p>Yes. For more information, see the <a href="license.htm">license page</a>.</p>
     <a href="https://lunx-home.neocities.org" style="display: block; width: fit-content; margin: auto">
       <img alt="Supported by LUNX" src="https://lunx-home.neocities.org/assets/button1testanimationr3.gif" />
-      <img alt="No AI Slop" src="https://lunx-home.neocities.org/assets/Frame%201903.png"/>
+      <img alt="No AI Slop" src="https://lunx-home.neocities.org/assets/Frame%201903.png" />
     </a>
     <small>© 2026 <a href="/">MagentaDude</a></small>
   </body>
